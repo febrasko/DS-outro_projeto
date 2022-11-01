@@ -22,8 +22,6 @@ namespace Projeto
         {
             txtNomeResp.Text = "";
             txtNomeAnimal.Text = "";
-            cbTipo.SelectedItem = null;
-            dtpData.Text = "";
             txtObs.Text = "";
             cdSelecionado = null;
             btnExcluir.Visible = false;
@@ -38,14 +36,12 @@ namespace Projeto
         private void btnEnviar_Click(object sender, EventArgs e)
         {
 
-            if (txtNomeResp.Text == "" || txtNomeAnimal.Text == "" || cbTipo.Text == "" || dtpData.Text == "" || txtObs.Text == "")
+            if (txtNomeResp.Text == "" || txtNomeAnimal.Text == "" || txtObs.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
             else if (cdSelecionado == null)
             {
-                string data = dtpData.Value.ToString("yyyy-MM-dd");
-
                 string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
                 MySqlConnection msconnection = new MySqlConnection(conexao);
                 msconnection.Open();
@@ -56,8 +52,6 @@ namespace Projeto
                     $"(0, @nomeres, @nomeanimal, @tipo, @data, @obs)";
                 mscommand.Parameters.AddWithValue("@nomeres", txtNomeResp.Text);
                 mscommand.Parameters.AddWithValue("@nomeanimal", txtNomeAnimal.Text);
-                mscommand.Parameters.AddWithValue("@tipo", cbTipo.Text);
-                mscommand.Parameters.AddWithValue("@data", data);
                 mscommand.Parameters.AddWithValue("@obs", txtObs.Text);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
@@ -68,8 +62,6 @@ namespace Projeto
             }
             else
             {
-                string data = dtpData.Value.ToString("yyyy-MM-dd");
-
                 string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
                 MySqlConnection msconnection = new MySqlConnection(conexao);
                 msconnection.Open();
@@ -85,8 +77,6 @@ namespace Projeto
                                         $"WHERE cdAgendamento = @cd";
                 mscommand.Parameters.AddWithValue("@responsavel", txtNomeResp.Text);
                 mscommand.Parameters.AddWithValue("@animal", txtNomeAnimal.Text);
-                mscommand.Parameters.AddWithValue("@tipo", cbTipo.Text);
-                mscommand.Parameters.AddWithValue("@data", data);
                 mscommand.Parameters.AddWithValue("@obs", txtObs.Text);
                 mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
                 mscommand.Prepare();
@@ -122,8 +112,6 @@ namespace Projeto
                 cdSelecionado = Convert.ToInt32(campo.Cells[0].Value);
                 txtNomeResp.Text = campo.Cells[1].Value.ToString();
                 txtNomeAnimal.Text = campo.Cells[2].Value.ToString();
-                cbTipo.Text = campo.Cells[3].Value.ToString();
-                dtpData.Text = campo.Cells[4].Value.ToString();
                 txtObs.Text = campo.Cells[5].Value.ToString();
                 btnExcluir.Visible = true;
             }

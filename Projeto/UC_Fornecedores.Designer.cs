@@ -33,28 +33,24 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtCNPJ = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtProdFornecidos = new System.Windows.Forms.RichTextBox();
-            this.txtEndereco = new System.Windows.Forms.RichTextBox();
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripExcluir = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(30, 293);
+            this.btnEnviar.Location = new System.Drawing.Point(34, 136);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 25);
             this.btnEnviar.TabIndex = 28;
@@ -64,47 +60,29 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(92, 185);
+            this.txtTelefone.Location = new System.Drawing.Point(91, 108);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(99, 23);
+            this.txtTelefone.Size = new System.Drawing.Size(122, 23);
             this.txtTelefone.TabIndex = 24;
             // 
             // txtCNPJ
             // 
-            this.txtCNPJ.Location = new System.Drawing.Point(91, 88);
+            this.txtCNPJ.Location = new System.Drawing.Point(91, 79);
             this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(100, 23);
+            this.txtCNPJ.Size = new System.Drawing.Size(123, 23);
             this.txtCNPJ.TabIndex = 26;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(5, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 34);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Produto(s) fornecido(s)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(91, 60);
+            this.txtNome.Location = new System.Drawing.Point(91, 51);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(171, 23);
             this.txtNome.TabIndex = 27;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 15);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Endereço";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 189);
+            this.label3.Location = new System.Drawing.Point(34, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 20;
@@ -113,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 91);
+            this.label4.Location = new System.Drawing.Point(52, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 15);
             this.label4.TabIndex = 21;
@@ -122,27 +100,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 63);
+            this.label1.Location = new System.Drawing.Point(46, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 23;
             this.label1.Text = "Nome";
-            // 
-            // txtProdFornecidos
-            // 
-            this.txtProdFornecidos.Location = new System.Drawing.Point(91, 126);
-            this.txtProdFornecidos.Name = "txtProdFornecidos";
-            this.txtProdFornecidos.Size = new System.Drawing.Size(171, 53);
-            this.txtProdFornecidos.TabIndex = 30;
-            this.txtProdFornecidos.Text = "";
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(91, 223);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(171, 58);
-            this.txtEndereco.TabIndex = 30;
-            this.txtEndereco.Text = "";
             // 
             // dgvFornecedores
             // 
@@ -173,14 +135,28 @@
             this.dgvFornecedores.RowHeadersVisible = false;
             this.dgvFornecedores.RowTemplate.Height = 25;
             this.dgvFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFornecedores.Size = new System.Drawing.Size(499, 324);
+            this.dgvFornecedores.Size = new System.Drawing.Size(498, 448);
             this.dgvFornecedores.TabIndex = 32;
             this.dgvFornecedores.CurrentCellChanged += new System.EventHandler(this.dgvFornecedores_CurrentCellChanged);
             this.dgvFornecedores.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvFornecedores_DataBindingComplete);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripExcluir});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(110, 26);
+            // 
+            // toolStripExcluir
+            // 
+            this.toolStripExcluir.Name = "toolStripExcluir";
+            this.toolStripExcluir.Size = new System.Drawing.Size(109, 22);
+            this.toolStripExcluir.Text = "Excluir";
+            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
+            // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(192, 294);
+            this.btnExcluir.Location = new System.Drawing.Point(196, 137);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 34;
@@ -191,7 +167,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(111, 294);
+            this.btnLimpar.Location = new System.Drawing.Point(115, 137);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 33;
@@ -216,20 +192,6 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "Pesquisar";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripExcluir});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            // 
-            // toolStripExcluir
-            // 
-            this.toolStripExcluir.Name = "toolStripExcluir";
-            this.toolStripExcluir.Size = new System.Drawing.Size(180, 22);
-            this.toolStripExcluir.Text = "Excluir";
-            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
-            // 
             // UC_Fornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -240,19 +202,15 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dgvFornecedores);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtProdFornecidos);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtCNPJ);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "UC_Fornecedores";
-            this.Size = new System.Drawing.Size(793, 378);
+            this.Size = new System.Drawing.Size(792, 502);
             this.Load += new System.EventHandler(this.UC_Fornecedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -265,14 +223,10 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtCNPJ;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox txtProdFornecidos;
-        private System.Windows.Forms.RichTextBox txtEndereco;
         private System.Windows.Forms.DataGridView dgvFornecedores;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnLimpar;

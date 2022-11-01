@@ -168,23 +168,30 @@ namespace Projeto
 
         private void toolStripExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult escolha = MessageBox.Show("Tem certeza que deseja excluir o registro?",
-                                                   "Excluir",
-                                                   MessageBoxButtons.YesNo,
-                                                   MessageBoxIcon.Warning);
-            if (escolha == DialogResult.Yes)
+            if (cdSelecionado == null)
             {
-                string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
-                MySqlConnection msconnection = new MySqlConnection(conexao);
-                msconnection.Open();
-                MySqlCommand mscommand = new MySqlCommand();
-                mscommand.Connection = msconnection;
-                mscommand.CommandText = $"DELETE FROM cadprodutos WHERE cdProd = @cd";
-                mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
-                mscommand.Prepare();
-                mscommand.ExecuteNonQuery();
-                util.abrirDgv(dgvProdutos, "cadprodutos");
-                limparCampos();
+                return;
+            }
+            else
+            {
+                DialogResult escolha = MessageBox.Show("Tem certeza que deseja excluir o registro?",
+                                                                   "Excluir",
+                                                                   MessageBoxButtons.YesNo,
+                                                                   MessageBoxIcon.Warning);
+                if (escolha == DialogResult.Yes)
+                {
+                    string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
+                    MySqlConnection msconnection = new MySqlConnection(conexao);
+                    msconnection.Open();
+                    MySqlCommand mscommand = new MySqlCommand();
+                    mscommand.Connection = msconnection;
+                    mscommand.CommandText = $"DELETE FROM cadprodutos WHERE cdProd = @cd";
+                    mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
+                    mscommand.Prepare();
+                    mscommand.ExecuteNonQuery();
+                    util.abrirDgv(dgvProdutos, "cadprodutos");
+                    limparCampos();
+                }
             }
         }
     }

@@ -31,6 +31,7 @@ namespace Projeto
         {
             UC_Produtos uc = new UC_Produtos();
             adicionarUC(uc);
+
         }
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
@@ -47,6 +48,18 @@ namespace Projeto
         private void btnAgenda_Click(object sender, EventArgs e)
         {
             UC_Agenda uc = new UC_Agenda();
+            adicionarUC(uc);
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            UC_Clientes uc = new UC_Clientes();
+            adicionarUC(uc);
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            UC_Vendas uc = new UC_Vendas();
             adicionarUC(uc);
         }
     }

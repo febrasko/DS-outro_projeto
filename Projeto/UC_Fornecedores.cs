@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Projeto
 {
@@ -23,9 +19,7 @@ namespace Projeto
         {
             txtNome.Text = "";
             txtCNPJ.Text = "";
-            txtProdFornecidos.Text = "";
             txtTelefone.Text = "";
-            txtEndereco.Text = "";
             cdSelecionado = null;
             btnExcluir.Visible = false;
         }
@@ -49,7 +43,7 @@ namespace Projeto
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || txtCNPJ.Text == "" || txtProdFornecidos.Text == "" || txtTelefone.Text == "" || txtEndereco.Text == "")
+            if (txtNome.Text == "" || txtCNPJ.Text == "" || txtTelefone.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
@@ -65,8 +59,6 @@ namespace Projeto
                     $"(0, @cnpj, @nome, @prodForn, @endereco, @tel)";
                 mscommand.Parameters.AddWithValue("@cnpj", txtCNPJ.Text);
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
-                mscommand.Parameters.AddWithValue("@prodForn", txtProdFornecidos.Text);
-                mscommand.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
@@ -92,8 +84,6 @@ namespace Projeto
                                         $"WHERE cdForn = @cd";
                 mscommand.Parameters.AddWithValue("@cnpj", txtCNPJ.Text);
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
-                mscommand.Parameters.AddWithValue("@prod", txtProdFornecidos.Text);
-                mscommand.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
                 mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
                 mscommand.Prepare();
@@ -135,8 +125,6 @@ namespace Projeto
                 cdSelecionado = Convert.ToInt32(campo.Cells[0].Value);
                 txtCNPJ.Text = campo.Cells[1].Value.ToString();
                 txtNome.Text = campo.Cells[2].Value.ToString();
-                txtProdFornecidos.Text = campo.Cells[3].Value.ToString();
-                txtEndereco.Text = campo.Cells[4].Value.ToString();
                 txtTelefone.Text = campo.Cells[5].Value.ToString();
                 btnExcluir.Visible = true;
             }

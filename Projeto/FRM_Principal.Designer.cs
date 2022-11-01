@@ -31,13 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnFornecedores = new System.Windows.Forms.Button();
-            this.btnVendas = new System.Windows.Forms.Button();
             this.btnAgenda = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnVendas = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
+            this.btnFornecedores = new System.Windows.Forms.Button();
+            this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,7 +70,6 @@
             this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel2.Controls.Add(this.btnAgenda);
             this.panel2.Controls.Add(this.btnVendas);
-            this.panel2.Controls.Add(this.btnEstoque);
             this.panel2.Controls.Add(this.btnProdutos);
             this.panel2.Controls.Add(this.btnFornecedores);
             this.panel2.Controls.Add(this.btnFuncionarios);
@@ -80,39 +78,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 450);
+            this.panel2.Size = new System.Drawing.Size(155, 502);
             this.panel2.TabIndex = 1;
-            // 
-            // btnFornecedores
-            // 
-            this.btnFornecedores.BackColor = System.Drawing.Color.Transparent;
-            this.btnFornecedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFornecedores.FlatAppearance.BorderSize = 0;
-            this.btnFornecedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFornecedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
-            this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedores.Location = new System.Drawing.Point(0, 128);
-            this.btnFornecedores.Name = "btnFornecedores";
-            this.btnFornecedores.Size = new System.Drawing.Size(155, 35);
-            this.btnFornecedores.TabIndex = 1;
-            this.btnFornecedores.Text = "Fornecedores";
-            this.btnFornecedores.UseVisualStyleBackColor = false;
-            this.btnFornecedores.Click += new System.EventHandler(this.btnFornecedores_Click);
-            // 
-            // btnVendas
-            // 
-            this.btnVendas.BackColor = System.Drawing.Color.Transparent;
-            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendas.FlatAppearance.BorderSize = 0;
-            this.btnVendas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
-            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendas.Location = new System.Drawing.Point(0, 233);
-            this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(155, 35);
-            this.btnVendas.TabIndex = 7;
-            this.btnVendas.Text = "Vendas";
-            this.btnVendas.UseVisualStyleBackColor = false;
             // 
             // btnAgenda
             // 
@@ -122,7 +89,7 @@
             this.btnAgenda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
             this.btnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgenda.Location = new System.Drawing.Point(0, 268);
+            this.btnAgenda.Location = new System.Drawing.Point(0, 233);
             this.btnAgenda.Name = "btnAgenda";
             this.btnAgenda.Size = new System.Drawing.Size(155, 35);
             this.btnAgenda.TabIndex = 2;
@@ -130,51 +97,21 @@
             this.btnAgenda.UseVisualStyleBackColor = false;
             this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
             // 
-            // btnEstoque
+            // btnVendas
             // 
-            this.btnEstoque.BackColor = System.Drawing.Color.Transparent;
-            this.btnEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEstoque.FlatAppearance.BorderSize = 0;
-            this.btnEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Location = new System.Drawing.Point(0, 198);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(155, 35);
-            this.btnEstoque.TabIndex = 6;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.UseVisualStyleBackColor = false;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.BackColor = System.Drawing.Color.Transparent;
-            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Location = new System.Drawing.Point(0, 58);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(155, 35);
-            this.btnClientes.TabIndex = 5;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = false;
-            // 
-            // btnFuncionarios
-            // 
-            this.btnFuncionarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFuncionarios.FlatAppearance.BorderSize = 0;
-            this.btnFuncionarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
-            this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFuncionarios.Location = new System.Drawing.Point(0, 93);
-            this.btnFuncionarios.Name = "btnFuncionarios";
-            this.btnFuncionarios.Size = new System.Drawing.Size(155, 35);
-            this.btnFuncionarios.TabIndex = 4;
-            this.btnFuncionarios.Text = "Funcionários";
-            this.btnFuncionarios.UseVisualStyleBackColor = false;
-            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
+            this.btnVendas.BackColor = System.Drawing.Color.Transparent;
+            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendas.FlatAppearance.BorderSize = 0;
+            this.btnVendas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
+            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendas.Location = new System.Drawing.Point(0, 198);
+            this.btnVendas.Name = "btnVendas";
+            this.btnVendas.Size = new System.Drawing.Size(155, 35);
+            this.btnVendas.TabIndex = 7;
+            this.btnVendas.Text = "Vendas";
+            this.btnVendas.UseVisualStyleBackColor = false;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnProdutos
             // 
@@ -192,12 +129,60 @@
             this.btnProdutos.UseVisualStyleBackColor = false;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
+            // btnFornecedores
+            // 
+            this.btnFornecedores.BackColor = System.Drawing.Color.Transparent;
+            this.btnFornecedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFornecedores.FlatAppearance.BorderSize = 0;
+            this.btnFornecedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFornecedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
+            this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedores.Location = new System.Drawing.Point(0, 128);
+            this.btnFornecedores.Name = "btnFornecedores";
+            this.btnFornecedores.Size = new System.Drawing.Size(155, 35);
+            this.btnFornecedores.TabIndex = 1;
+            this.btnFornecedores.Text = "Fornecedores";
+            this.btnFornecedores.UseVisualStyleBackColor = false;
+            this.btnFornecedores.Click += new System.EventHandler(this.btnFornecedores_Click);
+            // 
+            // btnFuncionarios
+            // 
+            this.btnFuncionarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFuncionarios.FlatAppearance.BorderSize = 0;
+            this.btnFuncionarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
+            this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFuncionarios.Location = new System.Drawing.Point(0, 93);
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.Size = new System.Drawing.Size(155, 35);
+            this.btnFuncionarios.TabIndex = 4;
+            this.btnFuncionarios.Text = "Funcionários";
+            this.btnFuncionarios.UseVisualStyleBackColor = false;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Location = new System.Drawing.Point(0, 58);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(155, 35);
+            this.btnClientes.TabIndex = 5;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
             // panelPrincipal
             // 
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(155, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(638, 450);
+            this.panelPrincipal.Size = new System.Drawing.Size(792, 502);
             this.panelPrincipal.TabIndex = 2;
             // 
             // FRM_Principal
@@ -205,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(793, 450);
+            this.ClientSize = new System.Drawing.Size(947, 502);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panel2);
             this.Name = "FRM_Principal";
@@ -229,7 +214,6 @@
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnVendas;
-        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnClientes;
     }
 }

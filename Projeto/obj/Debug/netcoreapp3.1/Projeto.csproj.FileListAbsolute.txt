@@ -29,3 +29,5 @@ C:\Stuff\Coding\Repositórios\DS-outro_projeto\Projeto\obj\Debug\netcoreapp3.1\P
 C:\Stuff\Coding\Repositórios\DS-outro_projeto\Projeto\obj\Debug\netcoreapp3.1\Projeto.dll
 C:\Stuff\Coding\Repositórios\DS-outro_projeto\Projeto\obj\Debug\netcoreapp3.1\Projeto.pdb
 C:\Stuff\Coding\Repositórios\DS-outro_projeto\Projeto\obj\Debug\netcoreapp3.1\Projeto.genruntimeconfig.cache
+C:\Stuff\Coding\Repositórios\DS-outro_projeto\Projeto\obj\Debug\netcoreapp3.1\Projeto.UC_Vendas.resources
+C:\Stuff\Coding\Repositórios\DS-outro_projeto\Projeto\obj\Debug\netcoreapp3.1\Projeto.UC_Clientes.resources
