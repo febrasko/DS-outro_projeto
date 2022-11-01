@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnAgenda = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel2.Controls.Add(this.btnSair);
             this.panel2.Controls.Add(this.btnAgenda);
             this.panel2.Controls.Add(this.btnVendas);
             this.panel2.Controls.Add(this.btnProdutos);
@@ -80,6 +82,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(155, 502);
             this.panel2.TabIndex = 1;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightYellow;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Location = new System.Drawing.Point(0, 467);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(155, 35);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnAgenda
             // 
@@ -196,6 +214,7 @@
             this.Name = "FRM_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_Principal_FormClosed);
             this.Load += new System.EventHandler(this.FRM_Principal_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -215,5 +234,6 @@
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnSair;
     }
 }

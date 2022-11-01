@@ -26,8 +26,8 @@ namespace Projeto
             else if (txtUser.Text == "ETEC" && txtPass.Text == "etec")
             {
                 FRM_Principal frm = new FRM_Principal();
-                Hide();
                 frm.Show();
+                Hide();
             }
             else
             {

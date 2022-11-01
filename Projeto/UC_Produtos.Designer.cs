@@ -209,7 +209,7 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(347, 18);
+            this.txtPesquisa.Location = new System.Drawing.Point(349, 18);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(180, 23);
             this.txtPesquisa.TabIndex = 12;
@@ -218,7 +218,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(284, 21);
+            this.label2.Location = new System.Drawing.Point(286, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 13;

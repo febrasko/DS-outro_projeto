@@ -119,7 +119,7 @@
             this.dgvFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFornecedores.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvFornecedores.Location = new System.Drawing.Point(285, 51);
+            this.dgvFornecedores.Location = new System.Drawing.Point(286, 47);
             this.dgvFornecedores.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.dgvFornecedores.MultiSelect = false;
             this.dgvFornecedores.Name = "dgvFornecedores";
@@ -135,7 +135,7 @@
             this.dgvFornecedores.RowHeadersVisible = false;
             this.dgvFornecedores.RowTemplate.Height = 25;
             this.dgvFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFornecedores.Size = new System.Drawing.Size(498, 448);
+            this.dgvFornecedores.Size = new System.Drawing.Size(498, 452);
             this.dgvFornecedores.TabIndex = 32;
             this.dgvFornecedores.CurrentCellChanged += new System.EventHandler(this.dgvFornecedores_CurrentCellChanged);
             this.dgvFornecedores.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvFornecedores_DataBindingComplete);
@@ -177,7 +177,7 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(348, 22);
+            this.txtPesquisa.Location = new System.Drawing.Point(348, 18);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(180, 23);
             this.txtPesquisa.TabIndex = 35;
@@ -186,7 +186,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(285, 25);
+            this.label2.Location = new System.Drawing.Point(285, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 36;

@@ -23,9 +23,9 @@ namespace Projeto
         }
         private void FRM_Principal_Load(object sender, EventArgs e)
         {
-            UC_Funcionarios uc = new UC_Funcionarios();
+            UC_Clientes uc = new UC_Clientes();
             adicionarUC(uc);
-            btnFuncionarios.Select();
+            btnClientes.Select();
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,16 @@ namespace Projeto
         {
             UC_Vendas uc = new UC_Vendas();
             adicionarUC(uc);
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FRM_Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
