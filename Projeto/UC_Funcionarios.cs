@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace PetShop
+namespace Projeto
 {
     public partial class UC_Funcionarios : UserControl
     {
@@ -40,13 +40,12 @@ namespace PetShop
             txtCPF.Text = "";
             dtpNascimento.Text = default;
             txtTelefone.Text = "";
-            txtEndereco.Text = "";
             cdSelecionado = null;
             btnExcluir.Visible = false;
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (txtCargo.Text == "" || txtCPF.Text == "" || dtpNascimento.Text == "" || txtTelefone.Text == "" || txtEndereco.Text == "")
+            if (txtCargo.Text == "" || txtCPF.Text == "" || dtpNascimento.Text == "" || txtTelefone.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
@@ -71,7 +70,6 @@ namespace PetShop
                 mscommand.Parameters.AddWithValue("@cpf", txtCPF.Text);
                 mscommand.Parameters.AddWithValue("@nascimento", nascimento);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
-                mscommand.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
 
@@ -107,7 +105,6 @@ namespace PetShop
                 mscommand.Parameters.AddWithValue("@cpf", txtCPF.Text);
                 mscommand.Parameters.AddWithValue("@nascimento", nascimento);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
-                mscommand.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                 mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
@@ -149,7 +146,6 @@ namespace PetShop
                 txtCargo.Text = campo.Cells[0].Value.ToString();
                 dtpNascimento.Text = campo.Cells[1].Value.ToString();
                 txtCPF.Text = campo.Cells[2].Value.ToString();
-                txtEndereco.Text = campo.Cells[3].Value.ToString();
                 txtTelefone.Text = campo.Cells[4].Value.ToString();
                 cdSelecionado = Convert.ToInt32(campo.Cells[5].Value);
                 btnExcluir.Visible = true;

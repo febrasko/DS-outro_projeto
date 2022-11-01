@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace PetShop
+namespace Projeto
 {
     public partial class UC_Fornecedores : UserControl
     {

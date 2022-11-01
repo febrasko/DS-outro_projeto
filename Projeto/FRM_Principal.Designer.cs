@@ -1,4 +1,4 @@
-﻿namespace PetShop
+﻿namespace Projeto
 {
     partial class FRM_Principal
     {

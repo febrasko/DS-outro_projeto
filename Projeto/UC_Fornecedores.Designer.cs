@@ -1,4 +1,4 @@
-﻿namespace PetShop
+﻿namespace Projeto
 {
     partial class UC_Fornecedores
     {

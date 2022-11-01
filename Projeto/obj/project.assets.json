@@ -852,9 +852,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Stuff\\Coding\\Repositórios\\DS-outro_projeto\\Projeto\\PetShop.csproj",
-      "projectName": "PetShop",
-      "projectPath": "C:\\Stuff\\Coding\\Repositórios\\DS-outro_projeto\\Projeto\\PetShop.csproj",
+      "projectUniqueName": "C:\\Stuff\\Coding\\Repositórios\\DS-outro_projeto\\Projeto\\Projeto.csproj",
+      "projectName": "Projeto",
+      "projectPath": "C:\\Stuff\\Coding\\Repositórios\\DS-outro_projeto\\Projeto\\Projeto.csproj",
       "packagesPath": "C:\\Users\\Ehmol\\.nuget\\packages\\",
       "outputPath": "C:\\Stuff\\Coding\\Repositórios\\DS-outro_projeto\\Projeto\\obj\\",
       "projectStyle": "PackageReference",

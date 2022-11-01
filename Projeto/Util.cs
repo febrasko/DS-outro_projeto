@@ -5,7 +5,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace PetShop
+namespace Projeto
 {
     internal class Util
     {
