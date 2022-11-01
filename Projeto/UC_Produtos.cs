@@ -24,8 +24,8 @@ namespace PetShop
             txtNome.Text = "";
             txtMarca.Text = "";
             txtValor.Text = "";
-            txtQtd.Text = "";
-            txtMedida.Text = "";
+            txtValor.Text = "";
+            txtDesc.Text = "";
             cdSelecionado = null;
             btnExcluir.Visible = false;
         }
@@ -44,7 +44,7 @@ namespace PetShop
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || txtMarca.Text == "" || txtValor.Text == "" || txtQtd.Text == "" || txtMedida.Text == "" || txtMarca.Text == "")
+            if (txtNome.Text == "" || txtMarca.Text == "" || txtValor.Text == "" || txtValor.Text == "" || txtDesc.Text == "" || txtMarca.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
@@ -62,8 +62,8 @@ namespace PetShop
                                         $"(@nome, @valor, @qtd, @medida, @marca)";
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
                 mscommand.Parameters.AddWithValue("@valor", txtValor.Text);
-                mscommand.Parameters.AddWithValue("@qtd", txtQtd.Text);
-                mscommand.Parameters.AddWithValue("@medida", txtMedida.Text);
+                mscommand.Parameters.AddWithValue("@qtd", txtValor.Text);
+                mscommand.Parameters.AddWithValue("@medida", txtDesc.Text);
                 mscommand.Parameters.AddWithValue("@marca", txtMarca.Text);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
@@ -89,8 +89,8 @@ namespace PetShop
                                         $"WHERE cdProd = @cd";
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
                 mscommand.Parameters.AddWithValue("@valor", txtValor.Text);
-                mscommand.Parameters.AddWithValue("@qtd", txtQtd.Text);
-                mscommand.Parameters.AddWithValue("@medida", txtMedida.Text);
+                mscommand.Parameters.AddWithValue("@qtd", txtValor.Text);
+                mscommand.Parameters.AddWithValue("@medida", txtDesc.Text);
                 mscommand.Parameters.AddWithValue("@marca", txtMarca.Text);
                 mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
                 mscommand.Prepare();
@@ -131,8 +131,8 @@ namespace PetShop
                 cdSelecionado = Convert.ToInt32(campo.Cells[0].Value);
                 txtNome.Text = campo.Cells[1].Value.ToString();
                 txtValor.Text = campo.Cells[2].Value.ToString();
-                txtQtd.Text = campo.Cells[3].Value.ToString();
-                txtMedida.Text = campo.Cells[4].Value.ToString();
+                txtValor.Text = campo.Cells[3].Value.ToString();
+                txtDesc.Text = campo.Cells[4].Value.ToString();
                 txtMarca.Text = campo.Cells[5].Value.ToString();
                 btnExcluir.Visible = true;
             }

@@ -36,7 +36,7 @@ namespace PetShop
         private void limparCampos()
         {
             // Função para limpar todos os textboxes e esconder o botão de excluir
-            txtNome.Text = "";
+            txtCargo.Text = "";
             txtCPF.Text = "";
             dtpNascimento.Text = default;
             txtTelefone.Text = "";
@@ -46,7 +46,7 @@ namespace PetShop
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || txtCPF.Text == "" || dtpNascimento.Text == "" || txtTelefone.Text == "" || txtEndereco.Text == "")
+            if (txtCargo.Text == "" || txtCPF.Text == "" || dtpNascimento.Text == "" || txtTelefone.Text == "" || txtEndereco.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
@@ -67,7 +67,7 @@ namespace PetShop
                 mscommand.CommandText = $"INSERT INTO cadfuncionarios " +
                                         $"(nmFunc, dtNascimento, cpf, endereco, tel) VALUES " +
                                         $"(@nome, @nascimento, @cpf, @endereco, @tel)";
-                mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
+                mscommand.Parameters.AddWithValue("@nome", txtCargo.Text);
                 mscommand.Parameters.AddWithValue("@cpf", txtCPF.Text);
                 mscommand.Parameters.AddWithValue("@nascimento", nascimento);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
@@ -103,7 +103,7 @@ namespace PetShop
                                         $"endereco = @endereco, " +
                                         $"tel = @tel " +
                                         $"WHERE cdFunc = @cd";
-                mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
+                mscommand.Parameters.AddWithValue("@nome", txtCargo.Text);
                 mscommand.Parameters.AddWithValue("@cpf", txtCPF.Text);
                 mscommand.Parameters.AddWithValue("@nascimento", nascimento);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
@@ -146,7 +146,7 @@ namespace PetShop
             DataGridViewSelectedRowCollection linha_selecionada = dgvFuncionarios.SelectedRows;
             foreach (DataGridViewRow campo in linha_selecionada)
             {
-                txtNome.Text = campo.Cells[0].Value.ToString();
+                txtCargo.Text = campo.Cells[0].Value.ToString();
                 dtpNascimento.Text = campo.Cells[1].Value.ToString();
                 txtCPF.Text = campo.Cells[2].Value.ToString();
                 txtEndereco.Text = campo.Cells[3].Value.ToString();
@@ -159,7 +159,7 @@ namespace PetShop
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             limparCampos();
-            txtNome.Focus();
+            txtCargo.Focus();
         }
 
         private void tsMenuItemExcluir_Click(object sender, EventArgs e)

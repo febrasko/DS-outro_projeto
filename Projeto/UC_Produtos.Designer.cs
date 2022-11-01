@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMedida = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtQtd = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripExcluir = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +47,7 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbFornecedor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 107);
+            this.label1.Location = new System.Drawing.Point(34, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(80, 101);
+            this.txtNome.Location = new System.Drawing.Point(80, 130);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(137, 23);
             this.txtNome.TabIndex = 1;
@@ -81,40 +81,32 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 134);
+            this.label4.Location = new System.Drawing.Point(7, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 15);
+            this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Valor";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(80, 130);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(137, 23);
-            this.txtValor.TabIndex = 1;
+            this.label4.Text = "Fornecedor";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 194);
+            this.label5.Location = new System.Drawing.Point(16, 219);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 15);
+            this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Medida";
+            this.label5.Text = "Descrição";
             // 
-            // txtMedida
+            // txtDesc
             // 
-            this.txtMedida.Location = new System.Drawing.Point(80, 191);
-            this.txtMedida.Name = "txtMedida";
-            this.txtMedida.PlaceholderText = "litros, gramas etc.";
-            this.txtMedida.Size = new System.Drawing.Size(137, 23);
-            this.txtMedida.TabIndex = 1;
+            this.txtDesc.Location = new System.Drawing.Point(80, 217);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(137, 23);
+            this.txtDesc.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 225);
+            this.label6.Location = new System.Drawing.Point(34, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 15);
             this.label6.TabIndex = 0;
@@ -122,7 +114,7 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(80, 220);
+            this.txtMarca.Location = new System.Drawing.Point(80, 188);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(137, 23);
             this.txtMarca.TabIndex = 1;
@@ -130,18 +122,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 165);
+            this.label3.Location = new System.Drawing.Point(41, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 15);
+            this.label3.Size = new System.Drawing.Size(33, 15);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Quantidade";
+            this.label3.Text = "Valor";
             // 
-            // txtQtd
+            // txtValor
             // 
-            this.txtQtd.Location = new System.Drawing.Point(80, 162);
-            this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(137, 23);
-            this.txtQtd.TabIndex = 1;
+            this.txtValor.Location = new System.Drawing.Point(80, 159);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(137, 23);
+            this.txtValor.TabIndex = 1;
             // 
             // dgvProdutos
             // 
@@ -162,14 +154,14 @@
             this.dgvProdutos.MultiSelect = false;
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutos.RowHeadersVisible = false;
             this.dgvProdutos.RowTemplate.Height = 25;
             this.dgvProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -230,11 +222,20 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Pesquisar";
             // 
+            // cbFornecedor
+            // 
+            this.cbFornecedor.FormattingEnabled = true;
+            this.cbFornecedor.Location = new System.Drawing.Point(80, 101);
+            this.cbFornecedor.Name = "cbFornecedor";
+            this.cbFornecedor.Size = new System.Drawing.Size(137, 23);
+            this.cbFornecedor.TabIndex = 14;
+            // 
             // UC_Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.cbFornecedor);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExcluir);
@@ -242,8 +243,7 @@
             this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.txtMedida);
-            this.Controls.Add(this.txtQtd);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNome);
@@ -267,13 +267,12 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMedida;
+        private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtQtd;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnLimpar;
@@ -281,5 +280,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripExcluir;
+        private System.Windows.Forms.ComboBox cbFornecedor;
     }
 }
