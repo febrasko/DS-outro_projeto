@@ -17,8 +17,19 @@ namespace Projeto
         }
 
         Util util = new Util();
-        private int? cdSelecionado = null;
+        private void UC_Produtos_Load(object sender, EventArgs e)
+        {
+            util.abrirDgv(dgvProdutos, "produtos");
+            dgvProdutos.Columns[0].HeaderText = "ID";
+            dgvProdutos.Columns[1].Visible = false;
+            dgvProdutos.Columns[2].HeaderText = "NOME";
+            dgvProdutos.Columns[3].HeaderText = "VALOR";
+            dgvProdutos.Columns[4].HeaderText = "MARCA";
+            dgvProdutos.Columns[5].HeaderText = "DESC";
+            dgvProdutos.Columns[6].HeaderText = "QTD";
+        }
 
+        private int? cdSelecionado = null;
         private void limparCampos()
         {
             txtNome.Text = "";
@@ -30,21 +41,11 @@ namespace Projeto
             btnExcluir.Visible = false;
         }
 
-        private void UC_Produtos_Load(object sender, EventArgs e)
-        {
-            util.abrirDgv(dgvProdutos, "cadprodutos");
-            dgvProdutos.Columns[0].HeaderText = "ID";
-            dgvProdutos.Columns[1].HeaderText = "NOME";
-            dgvProdutos.Columns[2].HeaderText = "VALOR";
-            dgvProdutos.Columns[3].HeaderText = "QTD";
-            dgvProdutos.Columns[4].HeaderText = "MEDIDA";
-            dgvProdutos.Columns[5].HeaderText = "MARCA";
-            dgvProdutos.ClearSelection();
-        }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || txtMarca.Text == "" || txtValor.Text == "" || txtValor.Text == "" || txtDesc.Text == "" || txtMarca.Text == "")
+            string[] campos = { txtNome.Text, txtMarca.Text,  txtValor.Text, txtDesc.Text, txtQtd.Text};
+            if (util.isEmpty(campos))
             {
                 MessageBox.Show("Preencha todos os campos!");
             }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtCNPJ = new System.Windows.Forms.TextBox();
@@ -50,9 +50,9 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(34, 136);
+            this.btnEnviar.Location = new System.Drawing.Point(14, 133);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(75, 25);
+            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 28;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
@@ -60,21 +60,21 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(91, 108);
+            this.txtTelefone.Location = new System.Drawing.Point(71, 104);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(122, 23);
             this.txtTelefone.TabIndex = 24;
             // 
             // txtCNPJ
             // 
-            this.txtCNPJ.Location = new System.Drawing.Point(91, 79);
+            this.txtCNPJ.Location = new System.Drawing.Point(71, 75);
             this.txtCNPJ.Name = "txtCNPJ";
             this.txtCNPJ.Size = new System.Drawing.Size(123, 23);
             this.txtCNPJ.TabIndex = 26;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(91, 51);
+            this.txtNome.Location = new System.Drawing.Point(71, 47);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(171, 23);
             this.txtNome.TabIndex = 27;
@@ -82,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 112);
+            this.label3.Location = new System.Drawing.Point(14, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 20;
@@ -91,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 82);
+            this.label4.Location = new System.Drawing.Point(32, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 15);
             this.label4.TabIndex = 21;
@@ -100,7 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 54);
+            this.label1.Location = new System.Drawing.Point(26, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 23;
@@ -124,14 +124,14 @@
             this.dgvFornecedores.MultiSelect = false;
             this.dgvFornecedores.Name = "dgvFornecedores";
             this.dgvFornecedores.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFornecedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFornecedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFornecedores.RowHeadersVisible = false;
             this.dgvFornecedores.RowTemplate.Height = 25;
             this.dgvFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -156,7 +156,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(196, 137);
+            this.btnExcluir.Location = new System.Drawing.Point(176, 133);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 34;
@@ -167,7 +167,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(115, 137);
+            this.btnLimpar.Location = new System.Drawing.Point(95, 133);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 33;

@@ -11,7 +11,7 @@ namespace Projeto
     {
         public void abrirDgv(DataGridView dgv, string tabela)
         {
-            string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
+            string conexao = @"Server=localhost;Database=casa_racao;Uid=root;Pwd=''";
             MySqlConnection msconnection = new MySqlConnection(conexao);
             msconnection.Open();
             MySqlCommand mscommand = new MySqlCommand();
@@ -22,6 +22,17 @@ namespace Projeto
             msdAdapter.Fill(dt);
             dgv.DataSource = dt;
             msconnection.Close();
+        }
+        public bool isEmpty(string[] strings)
+        {
+            foreach (string t in strings)
+            {
+                if (t == string.Empty)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
