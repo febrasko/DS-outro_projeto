@@ -35,9 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
@@ -120,16 +118,6 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Produto(s)";
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(175, 192);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 24;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Visible = false;
-            // 
             // dtpNascimento
             // 
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -137,15 +125,6 @@
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(147, 23);
             this.dtpNascimento.TabIndex = 14;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(94, 192);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 22;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
             // 
             // btnEnviar
             // 
@@ -226,9 +205,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.dtpNascimento);
-            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCargo);
@@ -252,9 +229,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
-        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCargo;

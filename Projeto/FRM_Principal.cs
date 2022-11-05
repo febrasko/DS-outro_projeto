@@ -72,5 +72,10 @@ namespace Projeto
         {
             Application.Exit();
         }
+
+        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -29,170 +29,35 @@ namespace Projeto
             dgvProdutos.Columns[6].HeaderText = "QTD";
         }
 
-        private int? cdSelecionado = null;
-        private void limparCampos()
-        {
-            txtNome.Text = "";
-            txtMarca.Text = "";
-            txtValor.Text = "";
-            txtValor.Text = "";
-            txtDesc.Text = "";
-            cdSelecionado = null;
-            btnExcluir.Visible = false;
-        }
-
-
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            string[] campos = { txtNome.Text, txtMarca.Text,  txtValor.Text, txtDesc.Text, txtQtd.Text};
+            string[] campos = { txtNome.Text, txtValor.Text, txtMarca.Text, txtDesc.Text, txtQtd.Text, cbFornecedor.Text };
             if (util.isEmpty(campos))
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
-            else if (cdSelecionado == null)
+            else
             {
-                // insert
-                string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
+                string conexao = @"Server=localhost;Database=casa_racao;Uid=root;Pwd=''";
                 MySqlConnection msconnection = new MySqlConnection(conexao);
                 msconnection.Open();
 
                 MySqlCommand mscommand = new MySqlCommand();
                 mscommand.Connection = msconnection;
-                mscommand.CommandText = $"INSERT INTO cadprodutos " +
-                                        $"(nmProd, valor, Qtd, undMedida, marca) VALUES " +
-                                        $"(@nome, @valor, @qtd, @medida, @marca)";
+                mscommand.CommandText = $"INSERT INTO produtos " +
+                                        $"(nome, valor, marca, descricao, quantidade)" +
+                                        $" VALUES (@nome, @valor, @marca, @desc, @qtd)";
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
                 mscommand.Parameters.AddWithValue("@valor", txtValor.Text);
-                mscommand.Parameters.AddWithValue("@qtd", txtValor.Text);
-                mscommand.Parameters.AddWithValue("@medida", txtDesc.Text);
                 mscommand.Parameters.AddWithValue("@marca", txtMarca.Text);
+                mscommand.Parameters.AddWithValue("@desc", txtDesc.Text);
+                mscommand.Parameters.AddWithValue("@qtd", txtQtd.Text);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
 
                 msconnection.Close();
 
-                util.abrirDgv(dgvProdutos, "cadprodutos");
-            }
-            else
-            {
-                string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
-                MySqlConnection msconnection = new MySqlConnection(conexao);
-                msconnection.Open();
-
-                MySqlCommand mscommand = new MySqlCommand();
-                mscommand.Connection = msconnection;
-                mscommand.CommandText = $"UPDATE cadprodutos SET " +
-                                        $"nmProd = @nome, " +
-                                        $"valor = @valor, " +
-                                        $"Qtd = @qtd, " +
-                                        $"undMedida = @medida, " +
-                                        $"marca = @marca " +
-                                        $"WHERE cdProd = @cd";
-                mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
-                mscommand.Parameters.AddWithValue("@valor", txtValor.Text);
-                mscommand.Parameters.AddWithValue("@qtd", txtValor.Text);
-                mscommand.Parameters.AddWithValue("@medida", txtDesc.Text);
-                mscommand.Parameters.AddWithValue("@marca", txtMarca.Text);
-                mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
-                mscommand.Prepare();
-                mscommand.ExecuteNonQuery();
-
-                msconnection.Close();
-
-                limparCampos();
-
-                util.abrirDgv(dgvProdutos, "cadprodutos");
-            }
-        }
-
-        private void txtPesquisa_TextChanged(object sender, EventArgs e)
-        {
-            string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
-            MySqlConnection msconnection = new MySqlConnection(conexao);
-            msconnection.Open();
-            MySqlCommand mscommand = new MySqlCommand();
-            DataTable dt = new DataTable();
-            mscommand.CommandText = $"select * from cadprodutos where nmProd LIKE '%{txtPesquisa.Text}%'";
-            mscommand.Connection = msconnection;
-            MySqlDataAdapter msdAdapter = new MySqlDataAdapter(mscommand);
-            msdAdapter.Fill(dt);
-            dgvProdutos.DataSource = dt;
-        }
-
-        private void dgvProdutos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            dgvProdutos.ClearSelection();
-        }
-
-        private void dgvProdutos_CurrentCellChanged(object sender, EventArgs e)
-        {
-            DataGridViewSelectedRowCollection linha_selecionada = dgvProdutos.SelectedRows;
-            foreach (DataGridViewRow campo in linha_selecionada)
-            {
-                cdSelecionado = Convert.ToInt32(campo.Cells[0].Value);
-                txtNome.Text = campo.Cells[1].Value.ToString();
-                txtValor.Text = campo.Cells[2].Value.ToString();
-                txtValor.Text = campo.Cells[3].Value.ToString();
-                txtDesc.Text = campo.Cells[4].Value.ToString();
-                txtMarca.Text = campo.Cells[5].Value.ToString();
-                btnExcluir.Visible = true;
-            }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            limparCampos();
-            txtNome.Focus();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            DialogResult escolha = MessageBox.Show($"Tem certeza que deseja excluir o registro?",
-                                        "Excluir",
-                                        MessageBoxButtons.YesNo,
-                                        MessageBoxIcon.Warning);
-            if (escolha == DialogResult.Yes)
-            {
-                string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
-                MySqlConnection msconnection = new MySqlConnection(conexao);
-                msconnection.Open();
-                MySqlCommand mscommand = new MySqlCommand();
-                mscommand.Connection = msconnection;
-                mscommand.CommandText = $"DELETE FROM cadprodutos WHERE cdProd = @cd";
-                mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
-                mscommand.Prepare();
-                mscommand.ExecuteNonQuery();
-                util.abrirDgv(dgvProdutos, "cadprodutos");
-                limparCampos();
-            }
-        }
-
-        private void toolStripExcluir_Click(object sender, EventArgs e)
-        {
-            if (cdSelecionado == null)
-            {
-                return;
-            }
-            else
-            {
-                DialogResult escolha = MessageBox.Show("Tem certeza que deseja excluir o registro?",
-                                                                   "Excluir",
-                                                                   MessageBoxButtons.YesNo,
-                                                                   MessageBoxIcon.Warning);
-                if (escolha == DialogResult.Yes)
-                {
-                    string conexao = @"Server=localhost;Database=pet_shop;Uid=root;Pwd=''";
-                    MySqlConnection msconnection = new MySqlConnection(conexao);
-                    msconnection.Open();
-                    MySqlCommand mscommand = new MySqlCommand();
-                    mscommand.Connection = msconnection;
-                    mscommand.CommandText = $"DELETE FROM cadprodutos WHERE cdProd = @cd";
-                    mscommand.Parameters.AddWithValue("@cd", cdSelecionado.Value);
-                    mscommand.Prepare();
-                    mscommand.ExecuteNonQuery();
-                    util.abrirDgv(dgvProdutos, "cadprodutos");
-                    limparCampos();
-                }
+                util.abrirDgv(dgvProdutos, "produtos");
             }
         }
     }
