@@ -10,10 +10,14 @@ namespace Projeto
 {
     public partial class FRM_Principal : Form
     {
-        public FRM_Principal()
+        readonly FRM_Login login = new FRM_Login();
+
+        public FRM_Principal(FRM_Login parent)
         {
             InitializeComponent();
+            login = parent;
         }
+
         private void adicionarUC(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -26,11 +30,17 @@ namespace Projeto
             UC_Clientes uc = new UC_Clientes();
             adicionarUC(uc);
             btnClientes.Select();
+            if (login.user == "func")
+            {
+                btnFuncionarios.Visible = false;
+                btnFornecedores.Visible = false;
+            }
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
             UC_Produtos uc = new UC_Produtos();
             adicionarUC(uc);
+            MessageBox.Show(login.user);
 
         }
         private void btnFornecedores_Click(object sender, EventArgs e)
