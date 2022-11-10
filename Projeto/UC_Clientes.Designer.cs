@@ -31,8 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -64,7 +62,7 @@
             this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvClientes.Location = new System.Drawing.Point(286, 47);
+            this.dgvClientes.Location = new System.Drawing.Point(286, 30);
             this.dgvClientes.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
@@ -79,28 +77,12 @@
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowTemplate.Height = 25;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(498, 452);
+            this.dgvClientes.Size = new System.Drawing.Size(498, 469);
             this.dgvClientes.TabIndex = 10;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(349, 18);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(180, 23);
-            this.txtPesquisa.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(286, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Pesquisar";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(73, 47);
+            this.txtNome.Location = new System.Drawing.Point(73, 30);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(147, 23);
             this.txtNome.TabIndex = 27;
@@ -108,7 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 50);
+            this.label3.Location = new System.Drawing.Point(27, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 15);
             this.label3.TabIndex = 28;
@@ -116,7 +98,7 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(15, 134);
+            this.btnEnviar.Location = new System.Drawing.Point(15, 117);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 23;
@@ -126,15 +108,15 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(73, 105);
+            this.txtTelefone.Location = new System.Drawing.Point(73, 88);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(149, 23);
+            this.txtTelefone.Size = new System.Drawing.Size(147, 23);
             this.txtTelefone.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 108);
+            this.label7.Location = new System.Drawing.Point(16, 91);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 15);
             this.label7.TabIndex = 20;
@@ -142,7 +124,7 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(73, 76);
+            this.txtCPF.Location = new System.Drawing.Point(73, 59);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(147, 23);
             this.txtCPF.TabIndex = 15;
@@ -150,7 +132,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 79);
+            this.label4.Location = new System.Drawing.Point(39, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 15);
             this.label4.TabIndex = 25;
@@ -168,8 +150,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPesquisa);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvClientes);
             this.Name = "UC_Clientes";
             this.Size = new System.Drawing.Size(792, 502);
@@ -183,8 +163,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.TextBox txtPesquisa;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEnviar;

@@ -32,26 +32,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtObs = new System.Windows.Forms.RichTextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.txtProduto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtData = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.TextBox();
+            this.cbProduto = new System.Windows.Forms.ComboBox();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
             this.SuspendLayout();
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(104, 212);
+            this.txtObs.Location = new System.Drawing.Point(104, 174);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(171, 58);
             this.txtObs.TabIndex = 43;
@@ -59,7 +57,7 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(23, 285);
+            this.btnEnviar.Location = new System.Drawing.Point(23, 245);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 41;
@@ -67,23 +65,9 @@
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(104, 75);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(121, 23);
-            this.txtCliente.TabIndex = 39;
-            // 
-            // txtProduto
-            // 
-            this.txtProduto.Location = new System.Drawing.Point(104, 47);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(171, 23);
-            this.txtProduto.TabIndex = 40;
-            // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(2, 134);
+            this.label5.Location = new System.Drawing.Point(2, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 39);
             this.label5.TabIndex = 32;
@@ -93,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 106);
+            this.label3.Location = new System.Drawing.Point(42, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 34;
@@ -103,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 78);
+            this.label4.Location = new System.Drawing.Point(54, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 35;
@@ -113,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 50);
+            this.label1.Location = new System.Drawing.Point(35, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 15);
             this.label1.TabIndex = 37;
@@ -123,7 +107,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 215);
+            this.label6.Location = new System.Drawing.Point(24, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 15);
             this.label6.TabIndex = 32;
@@ -143,7 +127,7 @@
             this.dgvAgenda.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvAgenda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgenda.Location = new System.Drawing.Point(286, 47);
+            this.dgvAgenda.Location = new System.Drawing.Point(286, 31);
             this.dgvAgenda.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.dgvAgenda.MultiSelect = false;
             this.dgvAgenda.Name = "dgvAgenda";
@@ -164,35 +148,19 @@
             this.dgvAgenda.RowTemplate.Height = 25;
             this.dgvAgenda.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAgenda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAgenda.Size = new System.Drawing.Size(498, 452);
+            this.dgvAgenda.Size = new System.Drawing.Size(498, 468);
             this.dgvAgenda.TabIndex = 47;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(349, 18);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(180, 23);
-            this.txtPesquisa.TabIndex = 51;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(286, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Pesquisar";
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(104, 103);
+            this.txtEndereco.Location = new System.Drawing.Point(104, 87);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(121, 23);
             this.txtEndereco.TabIndex = 39;
             // 
             // txtData
             // 
-            this.txtData.Location = new System.Drawing.Point(104, 143);
+            this.txtData.Location = new System.Drawing.Point(104, 116);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(121, 23);
             this.txtData.TabIndex = 39;
@@ -200,7 +168,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 186);
+            this.label7.Location = new System.Drawing.Point(20, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 15);
             this.label7.TabIndex = 34;
@@ -209,26 +177,40 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(104, 183);
+            this.txtPreco.Location = new System.Drawing.Point(104, 145);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(121, 23);
             this.txtPreco.TabIndex = 39;
+            // 
+            // cbProduto
+            // 
+            this.cbProduto.FormattingEnabled = true;
+            this.cbProduto.Location = new System.Drawing.Point(104, 31);
+            this.cbProduto.Name = "cbProduto";
+            this.cbProduto.Size = new System.Drawing.Size(121, 23);
+            this.cbProduto.TabIndex = 53;
+            // 
+            // cbCliente
+            // 
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(104, 59);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(121, 23);
+            this.cbCliente.TabIndex = 53;
             // 
             // UC_Agenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Controls.Add(this.txtPesquisa);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbCliente);
+            this.Controls.Add(this.cbProduto);
             this.Controls.Add(this.dgvAgenda);
             this.Controls.Add(this.txtObs);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtCliente);
-            this.Controls.Add(this.txtProduto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -248,19 +230,17 @@
 
         private System.Windows.Forms.RichTextBox txtObs;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvAgenda;
-        private System.Windows.Forms.TextBox txtPesquisa;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.ComboBox cbProduto;
+        private System.Windows.Forms.ComboBox cbCliente;
     }
 }

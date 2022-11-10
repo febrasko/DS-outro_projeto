@@ -51,26 +51,35 @@ create table produtos(
 id int primary key auto_increment,
 id_fornecedor int,
 nome varchar(50) not null,
-valor decimal (10,2) not null,
-marca varchar (100),
+valor decimal(10,2) not null,
+marca varchar(100),
+qtd int,
 descricao text,
-quantidade int,
 foreign key (id_fornecedor) references fornecedores(id)
 );
-SELECT p.nome as produto, f.nome as fornecedor, marca, valor, descricao, quantidade
+SELECT p.nome as produto, f.nome as fornecedor, marca, valor, descricao, qtd
 FROM produtos p
 join fornecedores f on f.id = p.id_fornecedor;
 
 create table vendas(
-id int primary key auto_increment,
-id_produto int, -- multivalorado?
+id int primary key,
 id_funcionario int,
 id_cliente int, -- opcional
-valor decimal(10,2),
 datahora datetime,
+valor decimal(10,2),
 foreign key (id_produto) references produtos(id),
 foreign key (id_funcionario) references funcionarios(id),
 foreign key (id_cliente) references clientes(id)
+);
+
+create table vendaitem(
+id int primary key auto_increment,
+id_venda int,
+id_produto int,
+qtd int,
+valoritem decimal(10,2),
+foreign key (id_venda) references vendas(id),
+foreign key (id_produto) references produtos(id)
 );
 
 create table agendamento(

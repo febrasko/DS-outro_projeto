@@ -17,6 +17,7 @@ namespace Projeto
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            FRM_Login login = new FRM_Login();
             Application.Run(new FRM_Login());
         }
     }

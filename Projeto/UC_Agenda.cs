@@ -20,12 +20,12 @@ namespace Projeto
 
         private void UC_Agenda_Load(object sender, EventArgs e)
         {
-            util.abrirDgv(dgvAgenda, "agendamento");
+            util.Select(dgvAgenda, "agendamento");
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            string[] campos = { txtProduto.Text, txtCliente.Text, txtData.Text, txtObs.Text, txtEndereco.Text, txtPreco.Text };
+            string[] campos = { cbCliente.Text, cbProduto.Text, txtData.Text, txtObs.Text, txtEndereco.Text, txtPreco.Text };
             if (util.isEmpty(campos))
             {
                 MessageBox.Show("Preencha todos os campos!");

@@ -40,7 +40,6 @@ namespace Projeto
         {
             UC_Produtos uc = new UC_Produtos();
             adicionarUC(uc);
-            MessageBox.Show(login.user);
 
         }
         private void btnFornecedores_Click(object sender, EventArgs e)

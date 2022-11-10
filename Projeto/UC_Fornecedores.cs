@@ -16,7 +16,7 @@ namespace Projeto
 
         private void UC_Fornecedores_Load(object sender, EventArgs e)
         {
-            util.abrirDgv(dgvFornecedores, "fornecedores");
+            util.Select(dgvFornecedores, "fornecedores");
             dgvFornecedores.Columns[0].HeaderText = "ID";
             dgvFornecedores.Columns[1].HeaderText = "NOME";
             dgvFornecedores.Columns[2].HeaderText = "CNPJ";
@@ -53,7 +53,7 @@ namespace Projeto
 
                 msconnection.Close();
 
-                util.abrirDgv(dgvFornecedores, "fornecedores");
+                util.Select(dgvFornecedores, "fornecedores");
             }
         }
     }

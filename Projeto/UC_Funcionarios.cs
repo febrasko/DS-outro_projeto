@@ -20,7 +20,7 @@ namespace Projeto
 
         private void UC_Funcionarios_Load(object sender, EventArgs e)
         {
-            util.abrirDgv(dgvFuncionarios, "funcionarios");
+            util.Select(dgvFuncionarios, "funcionarios");
             dgvFuncionarios.Columns[0].Visible = false;
             dgvFuncionarios.Columns[1].Visible = false;
             dgvFuncionarios.Columns[2].HeaderText = "NOME";
@@ -64,7 +64,7 @@ namespace Projeto
 
                 msconnection.Close();
 
-                util.abrirDgv(dgvFuncionarios, "funcionarios");
+                util.Select(dgvFuncionarios, "funcionarios");
             }
         }
     }

@@ -9,7 +9,7 @@ namespace Projeto
 {
     internal class Util
     {
-        public void abrirDgv(DataGridView dgv, string tabela)
+        public void Select(DataGridView dgv, string tabela)
         {
             string conexao = @"Server=localhost;Database=casa_racao;Uid=root;Pwd=''";
             MySqlConnection msconnection = new MySqlConnection(conexao);

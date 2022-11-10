@@ -19,7 +19,7 @@ namespace Projeto
         Util util = new Util();
         private void UC_Produtos_Load(object sender, EventArgs e)
         {
-            util.abrirDgv(dgvProdutos, "produtos");
+            util.Select(dgvProdutos, "produtos");
             dgvProdutos.Columns[0].HeaderText = "ID";
             dgvProdutos.Columns[1].Visible = false;
             dgvProdutos.Columns[2].HeaderText = "NOME";
@@ -31,7 +31,7 @@ namespace Projeto
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            string[] campos = { txtNome.Text, txtValor.Text, txtMarca.Text, txtDesc.Text, txtQtd.Text, cbFornecedor.Text };
+            string[] campos = { txtNome.Text, txtValor.Text, txtMarca.Text, txtDesc.Text, numQtd.Text, cbFornecedor.Text };
             if (util.isEmpty(campos))
             {
                 MessageBox.Show("Preencha todos os campos!");
@@ -51,13 +51,13 @@ namespace Projeto
                 mscommand.Parameters.AddWithValue("@valor", txtValor.Text);
                 mscommand.Parameters.AddWithValue("@marca", txtMarca.Text);
                 mscommand.Parameters.AddWithValue("@desc", txtDesc.Text);
-                mscommand.Parameters.AddWithValue("@qtd", txtQtd.Text);
+                mscommand.Parameters.AddWithValue("@qtd", numQtd.Text);
                 mscommand.Prepare();
                 mscommand.ExecuteNonQuery();
 
                 msconnection.Close();
 
-                util.abrirDgv(dgvProdutos, "produtos");
+                util.Select(dgvProdutos, "produtos");
             }
         }
     }

@@ -19,7 +19,7 @@ namespace Projeto
 
         private void UC_Clientes_Load(object sender, EventArgs e)
         {
-            util.abrirDgv(dgvClientes, "clientes");
+            util.Select(dgvClientes, "clientes");
             dgvClientes.Columns[0].Visible = false;
             dgvClientes.Columns[1].Visible = false;
             dgvClientes.Columns[2].HeaderText = "NOME";
@@ -45,8 +45,8 @@ namespace Projeto
                 MySqlCommand mscommand = new MySqlCommand();
                 mscommand.Connection = msconnection;
                 mscommand.CommandText = $"INSERT INTO clientes " +
-                    $"(nome, tel, cpf)" +
-                    $" VALUES (@nome, @tel, @cpf)";
+                                        $"(nome, tel, cpf)" +
+                                        $" VALUES (@nome, @tel, @cpf)";
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
                 mscommand.Parameters.AddWithValue("@tel", txtTelefone.Text);
                 mscommand.Parameters.AddWithValue("@cpf", txtCPF.Text);
@@ -55,7 +55,7 @@ namespace Projeto
 
                 msconnection.Close();
 
-                util.abrirDgv(dgvClientes, "clientes");
+                util.Select(dgvClientes, "clientes");
             }
         }
     }
