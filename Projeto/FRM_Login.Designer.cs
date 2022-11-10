@@ -102,12 +102,12 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(123, 3);
+            this.label4.Location = new System.Drawing.Point(91, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 30);
+            this.label4.Size = new System.Drawing.Size(156, 30);
             this.label4.TabIndex = 1;
-            this.label4.Text = "PetShop";
+            this.label4.Text = "Casa de Ração";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
