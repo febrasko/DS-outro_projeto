@@ -18,10 +18,10 @@ namespace Projeto
         {
             util.Select(dgvFornecedores, "fornecedores");
             dgvFornecedores.Columns[0].HeaderText = "ID";
-            dgvFornecedores.Columns[1].HeaderText = "NOME";
-            dgvFornecedores.Columns[2].HeaderText = "CNPJ";
-            dgvFornecedores.Columns[3].HeaderText = "TEL";
-            dgvFornecedores.Columns[4].Visible = false;
+            dgvFornecedores.Columns[1].Visible = false;
+            dgvFornecedores.Columns[2].HeaderText = "NOME";
+            dgvFornecedores.Columns[3].HeaderText = "CNPJ";
+            dgvFornecedores.Columns[4].HeaderText = "TEL";
             dgvFornecedores.Columns[5].Visible = false;
             dgvFornecedores.Columns[6].Visible = false;
             dgvFornecedores.ClearSelection();

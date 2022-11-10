@@ -25,8 +25,8 @@ namespace Projeto
             dgvProdutos.Columns[2].HeaderText = "NOME";
             dgvProdutos.Columns[3].HeaderText = "VALOR";
             dgvProdutos.Columns[4].HeaderText = "MARCA";
-            dgvProdutos.Columns[5].HeaderText = "DESC";
-            dgvProdutos.Columns[6].HeaderText = "QTD";
+            dgvProdutos.Columns[5].HeaderText = "QTD";
+            dgvProdutos.Columns[6].HeaderText = "DESC";
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace Projeto
                 MySqlCommand mscommand = new MySqlCommand();
                 mscommand.Connection = msconnection;
                 mscommand.CommandText = $"INSERT INTO produtos " +
-                                        $"(nome, valor, marca, descricao, quantidade)" +
+                                        $"(nome, valor, marca, descricao, qtd)" +
                                         $" VALUES (@nome, @valor, @marca, @desc, @qtd)";
                 mscommand.Parameters.AddWithValue("@nome", txtNome.Text);
                 mscommand.Parameters.AddWithValue("@valor", txtValor.Text);
