@@ -67,7 +67,6 @@ id_funcionario int,
 id_cliente int, -- opcional
 datahora datetime,
 valor decimal(10,2),
-foreign key (id_produto) references produtos(id),
 foreign key (id_funcionario) references funcionarios(id),
 foreign key (id_cliente) references clientes(id)
 );
